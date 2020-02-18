@@ -1,9 +1,21 @@
 function setup() {
-    // create our canvas element
-    createCanvas(400, 300);
+  createCanvas(4000, 4000);
 }
+
 function draw() {
-    // draw some shapes
-    // rect(mouseX, mouseY, 20, 20);
-    ellipse(mouseX, mouseY, random(10, 50));
+  
+  noStroke();
+  fill(255,204,0)
+  
+  var size = random(1, 10); 
+  
+  if (mouseIsPressed)
+    ellipse(mouseX,mouseY, size);
+
+ if (keyIsPressed === true) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  rect(25, 25, 50, 50);
 }
